@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Факты</h2>
+<form method="post">
+    <input type="text" name="fact" placeholder="Добавьте новый факт">
+    <button type="submit" class="btn turquoise">Добавить</button>
+</form>
+<ul>
+    {% for fact in facts %}
+    <li>{{ fact.strip() }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}" class="btn turquoise">Вернуться на главную</a>
+{% endblock %}

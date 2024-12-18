@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>User Details</h2>
+<table>
+    <tr>
+        <th>User ID</th>
+        <td>{{ user.user_id }}</td>
+    </tr>
+    <tr>
+        <th>Имя пользователя</th>
+        <td>{{ user.username }}</td>
+    </tr>
+    <tr>
+        <th>Последняя активность</th>
+        <td>{{ user.last_active }}</td>
+    </tr>
+</table>
+<a href="{{ url_for('all_users') }}" class="btn turquoise">Вернуться к пользователям</a>
+{% endblock %}
